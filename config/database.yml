@@ -12,13 +12,13 @@ development:
 	<<: *default
 	database: DevOpsOne_development
 	username: DevOpsOne
-	password: <%= ENV[''DEVOPSONE_JS_DATABASE_PASSWORD'] %>
+	password: <%= ENV['DEVOPSONE_JS_DATABASE_PASSWORD'] %>
 
 test:
 	<<: *default
 	database: DevOpsOne_test
 	username: DevOpsOne
-	password: <%= ENV[''DEVOPSONE_JS_DATABASE_PASSWORD'] %>
+	password: <%= ENV['DEVOPSONE_JS_DATABASE_PASSWORD'] %>
 
 production:
 	<<: *default

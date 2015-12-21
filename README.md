@@ -28,7 +28,7 @@ Now you can ```rake db:setup```
 
 You may also ```RAILS_ENV=production  rake db:setup```
 
-#### If you didn't set up a postgres user with the same name as your rails app, ```rake db:setup`` will not work!
+##### If you didn't set up a postgres user with the same name as your rails app, ```rake db:setup``` will not work!
 
 #### On a Ubuntu Desktop
 
@@ -42,7 +42,7 @@ Now you can ```rake db:setup```
 
 You may also ```RAILS_ENV=production  rake db:setup```
 
-#### If you didn't set up a postgres user with the same name as your rails app, ```rake db:setup`` will not work!
+##### If you didn't set up a postgres user with the same name as your rails app, ```rake db:setup`` will not work!
 
 ### My next feautre is to automagically create and PG Database as well as the ```config/database.yml``` file
 

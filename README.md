@@ -14,6 +14,8 @@ Then the pg database would get created with a default password that the user can
 
 This way developing on a Linux machine can be much faster!
 
+# Disclaimer
+
 ##### If you didn't set up a postgres user with the same name as your rails app, ```rake db:setup``` will not work!
 
 # How To Use

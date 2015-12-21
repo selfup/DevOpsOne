@@ -22,22 +22,27 @@ class CreateDB
 	pool: 5\n
 	host: 127.0.0.1
 	username: #{find_app_name}
-	password: <%= ENV['#{find_app_name.upcase}_JS_DATABASE_PASSWORD'] %>\n
+	password: <%= ENV['#{find_app_name.upcase}_DATABASE_PASSWORD'] %>\n
 development:
 	<<: *default
 	database: #{find_app_name}_development
 	username: #{find_app_name}
-	password: <%= ENV[''#{find_app_name.upcase}_JS_DATABASE_PASSWORD'] %>\n
+	password: <%= ENV[''#{find_app_name.upcase}_DATABASE_PASSWORD'] %>\n
 test:
 	<<: *default
 	database: #{find_app_name}_test
 	username: #{find_app_name}
-	password: <%= ENV['#{find_app_name.upcase}_JS_DATABASE_PASSWORD'] %>\n
+	password: <%= ENV['#{find_app_name.upcase}_DATABASE_PASSWORD'] %>\n
 production:
 	<<: *default
 	database: #{find_app_name}_production
 	username: #{find_app_name}
-	password: <%= ENV['#{find_app_name.upcase}_JS_DATABASE_PASSWORD'] %>"
+	password: <%= ENV['#{find_app_name.upcase}_DATABASE_PASSWORD'] %>"
+	end
+
+	def rbenv_vars
+		"#{find_app_name.upcase}_DATABASE_USERNAME=#{find_app_name}"
+		"#{find_app_name.upcase}_DATABASE_PASSWORD=default$password"
 	end
 
 	def replace_file
@@ -45,6 +50,8 @@ production:
 		`rm -rf config/database.yml`
 		`cd #{target_directory}`
 		`echo "#{new_yml}" >> config/database.yml`
+		`cd #{target_directory}`
+		`echo "#{rbenv_vars}" >> .rbenv-vars`
 	end
 end
 

@@ -22,22 +22,22 @@ class CreateDB
 	pool: 5\n
 	host: localhost
 	username: #{find_app_name}
-	password: <%= ENV['#{find_app_name.upcase}_JS_DATABASE_PASSWORD'] %>\n
+	password: <%= ENV['#{find_app_name.upcase}_DATABASE_PASSWORD'] %>\n
 development:
 	<<: *default
 	database: #{find_app_name}_development
 	username: #{find_app_name}
-	password: <%= ENV[''#{find_app_name.upcase}_JS_DATABASE_PASSWORD'] %>\n
+	password: <%= ENV[''#{find_app_name.upcase}_DATABASE_PASSWORD'] %>\n
 test:
 	<<: *default
 	database: #{find_app_name}_test
 	username: #{find_app_name}
-	password: <%= ENV['#{find_app_name.upcase}_JS_DATABASE_PASSWORD'] %>\n
+	password: <%= ENV['#{find_app_name.upcase}_DATABASE_PASSWORD'] %>\n
 production:
 	<<: *default
 	database: #{find_app_name}_production
 	username: #{find_app_name}
-	password: <%= ENV['#{find_app_name.upcase}_JS_DATABASE_PASSWORD'] %>"
+	password: <%= ENV['#{find_app_name.upcase}_DATABASE_PASSWORD'] %>"
 	end
 
 	def replace_file

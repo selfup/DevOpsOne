@@ -1,0 +1,29 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+
+  host: 127.0.0.1
+  username: <%= ENV['DEFAULT_DATABASE_USERNAME'] %>
+  password: <%= ENV['DEFAULT_DATABASE_PASSWORD'] %>
+
+development:
+  <<: *default
+  database: ideabox_js_development
+
+  username: <%= ENV['DEFAULT_DATABASE_USERNAME'] %>
+
+  password: <%= ENV['DEFAULT_DATABASE_PASSWORD'] %>
+
+test:
+  <<: *default
+  database: ideabox_js_test
+
+  username: <%= ENV['DEFAULT_DATABASE_USERNAME'] %>
+  password: <%= ENV['DEFAULT_DATABASE_PASSWORD'] %>
+
+production:
+  <<: *default
+  database: ideabox_js_production
+  username: <%= ENV['DEFAULT_DATABASE_USERNAME'] %>
+  password: <%= ENV['DEFAULT_DATABASE_PASSWORD'] %>

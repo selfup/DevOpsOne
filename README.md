@@ -16,7 +16,7 @@ This way developing on a Linux machine can be much faster!
 
 ##### If you didn't set up a postgres user with the same name as your rails app, ```rake db:setup``` will not work!
 
-Also: you still ned to make a ```SECRET_KEY_BASE``` ```ENV``` var in your ```.rbenv-vars``` file
+Also: you still need to make a ```SECRET_KEY_BASE``` ```ENV``` var in your ```.rbenv-vars``` file for production commands to work
 
 # How To Use
 

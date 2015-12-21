@@ -2,12 +2,8 @@ require 'pry'
 
 class CreateDB
 	def target_directory
-    if ARGV[0]
-			ARGV[0]
-		else
-			`pwd`
-		end
-  end
+    	  `pwd`
+        end
 
 	def find_app_name
 		t_dir = target_directory
@@ -42,7 +38,7 @@ production:
 
 	def rbenv_vars
 		"#{find_app_name.upcase}_DATABASE_USERNAME=#{find_app_name}"
-		"#{find_app_name.upcase}_DATABASE_PASSWORD=default$password"
+		"#{find_app_name.upcase}_DATABASE_PASSWORD=ARGV[0]"
 	end
 
 	def replace_file

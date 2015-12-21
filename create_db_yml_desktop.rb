@@ -38,7 +38,7 @@ production:
 
 	def rbenv_vars
 		"#{find_app_name.upcase}_DATABASE_USERNAME=#{find_app_name}"
-		"#{find_app_name.upcase}_DATABASE_PASSWORD=ARGV[0]"
+		"#{find_app_name.upcase}_DATABASE_PASSWORD=#{ARGV[0]}"
 	end
 
 	def replace_file

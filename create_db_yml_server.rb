@@ -11,7 +11,7 @@ class CreateDB
     dbyml_app_name = app_name.last.gsub("\n", "")
   end
 
-	def new_yml
+  def new_yml
   "default: &default\n
   adapter: postgresql
   encoding: unicode
@@ -49,8 +49,17 @@ production:
     `cd #{target_directory}`
     `echo "#{rbenv_vars}" >> .rbenv-vars`
   end
+  
+  def create_pg_user
+    `sudo -u postgres createuser -s "#{find_app_name}"`
+  end
+  
+  def do_it_all
+    replace_file
+    create_pg_user
+    puts "#{find_app_name}"
+  end
 end
 
 h = CreateDB.new
-p h.find_app_name
-h.replace_file
+h.do_it_all

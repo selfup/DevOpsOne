@@ -44,13 +44,13 @@ Now you can ```rake db:setup```
 
 You may also ```RAILS_ENV=production  rake db:setup```
 
-### The script now creates a new pg user but you still ahve to manually make a password for that pg user
+### The script now creates a new pg user but you still have to manually make a password for that pg user
 
     sudo -u postgres psql
     \password your_pg_user_name
     \q
 
-##### My next feautre is to automagically create and PG Database as well as the ```config/database.yml``` file
+##### My next feautre is to automagically create the password based on your ARGV[0] for the new pg user
 
-####One script to automate the whole process!
+#### One script to automate the whole process!
 

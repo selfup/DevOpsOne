@@ -1,0 +1,27 @@
+default: &default
+
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+
+  host: 127.0.0.1
+  username: DevOpsOne
+  password: <%= ENV['DEVOPSONE_DATABASE_PASSWORD'] %>
+
+development:
+  <<: *default
+  database: DevOpsOne_development
+  username: DevOpsOne
+  password: <%= ENV['DEVOPSONE_DATABASE_PASSWORD'] %>
+
+test:
+  <<: *default
+  database: DevOpsOne_test
+  username: DevOpsOne
+  password: <%= ENV['DEVOPSONE_DATABASE_PASSWORD'] %>
+
+production:
+  <<: *default
+  database: DevOpsOne_production
+  username: DevOpsOne
+  password: <%= ENV['DEVOPSONE_DATABASE_PASSWORD'] %>

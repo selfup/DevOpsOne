@@ -2,8 +2,6 @@
 
 ##### For Rails, rbenv, rbenv-vars, Ubuntu, and Postgres
 
-First script for automating Postgres and Rails apps connections
-
 When on Ubuntu, a DB needs to be created with the same name as the username that rails autogenerates in the config/database.yml file
 
 The idea here is to create a ```valid database.yml``` file, as well as set correct ```ENV``` variables in a ```.rbenv-vars``` file. 

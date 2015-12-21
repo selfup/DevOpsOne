@@ -13,28 +13,28 @@ class CreateDB
 
 	def new_yml
   "default: &default\n
-	adapter: postgresql
-	encoding: unicode
-	pool: 5\n
-	host: localhost
-	username: #{find_app_name}
-	password: <%= ENV['#{find_app_name.upcase}_DATABASE_PASSWORD'] %>\n
+  adapter: postgresql
+  encoding: unicode
+  pool: 5\n
+  host: localhost
+  username: #{find_app_name}
+  password: <%= ENV['#{find_app_name.upcase}_DATABASE_PASSWORD'] %>\n
 development:
-	<<: *default
-	database: #{find_app_name}_development
-	username: #{find_app_name}
-	password: <%= ENV['#{find_app_name.upcase}_DATABASE_PASSWORD'] %>\n
+  <<: *default
+  database: #{find_app_name}_development
+  username: #{find_app_name}
+  password: <%= ENV['#{find_app_name.upcase}_DATABASE_PASSWORD'] %>\n
 test:
-	<<: *default
-	database: #{find_app_name}_test
-	username: #{find_app_name}
-	password: <%= ENV['#{find_app_name.upcase}_DATABASE_PASSWORD'] %>\n
+  <<: *default
+  database: #{find_app_name}_test
+  username: #{find_app_name}
+  password: <%= ENV['#{find_app_name.upcase}_DATABASE_PASSWORD'] %>\n
 production:
-	<<: *default
-	database: #{find_app_name}_production
-	username: #{find_app_name}
-	password: <%= ENV['#{find_app_name.upcase}_DATABASE_PASSWORD'] %>"
-	end
+  <<: *default
+  database: #{find_app_name}_production
+  username: #{find_app_name}
+  password: <%= ENV['#{find_app_name.upcase}_DATABASE_PASSWORD'] %>"
+  end
 
   def rbenv_vars
     "#{find_app_name.upcase}_DATABASE_USERNAME=#{find_app_name}"

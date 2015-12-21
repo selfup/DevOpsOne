@@ -4,7 +4,7 @@
 
 First script for automating Postgres and Rails apps connections
 
-When on Ubuntu, a DB needs to be created with the same name as the db username that rails autogenerates in the config/database.yml file
+When on Ubuntu, a DB needs to be created with the same name as the username that rails autogenerates in the config/database.yml file
 
 The idea here is to create a ```valid database.yml``` file, as well as set correct ```ENV``` variables in a ```.rbenv-vars``` file. 
 
@@ -17,6 +17,8 @@ This way developing on a Linux machine can be much faster!
 # Disclaimer
 
 ##### If you didn't set up a postgres user with the same name as your rails app, ```rake db:setup``` will not work!
+
+Also: you still ned to make a ```SECRET_KEY_BASE``` ```ENV``` var in your ```.rbenv-vars``` file
 
 # How To Use
 

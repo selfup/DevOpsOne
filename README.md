@@ -17,13 +17,30 @@ This way developing on a Linux machine can be much faster!
 #### On a Ubuntu Server
 
 Clone this at root
+
 Go to your rails app directory
 
     ruby ~/DevOpsOne/create_db_yml_server.rb the_password_you_set
 
 Now you can ```rake db:setup```
 
-If you didn't set up a postgres user with the same name as your rails app, this feature will come soon!
+You may also ```RAILS_ENV=production  rake db:setup```
 
-One script to automate the whole process!
+#### If you didn't set up a postgres user with the same name as your rails app, this feature will come soon!
+
+#### On a Ubuntu Desktop
+
+Clone this at root
+
+Go to your rails app directory
+
+    ruby ~/DevOpsOne/create_db_yml_desktop.rb the_password_you_set
+
+Now you can ```rake db:setup```
+
+You may also ```RAILS_ENV=production  rake db:setup```
+
+#### If you didn't set up a postgres user with the same name as your rails app, this feature will come soon!
+
+####One script to automate the whole process!
 

@@ -10,7 +10,8 @@ class CreateDB
   end
 
 	def find_app_name
-		app_name = target_directory.split("/")
+		t_dir = target_directory
+		app_name = t_dir.split("/")
 		dbyml_app_name = app_name.last.gsub("\n", "")
 	end
 
@@ -40,8 +41,10 @@ production:
 	end
 
 	def replace_file
-		`rm -rf #{target_directory}/config/database.yml`
-		`echo "#{new_yml}" >> #{target_directory}/config/database.yml`
+		# `cd #{target_directory}`
+		# `rm -rf #{target_directory}/config/database.yml`
+		`cd #{target_directory}`
+		`echo "#{new_yml}" >> config/database.yml`
 	end
 end
 

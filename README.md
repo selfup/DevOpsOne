@@ -12,3 +12,18 @@ Then the pg database would get created with a default password that the user can
 
 This way developing on a Linux machine can be much faster!
 
+# How To Use
+
+#### On a Ubuntu Server
+
+Clone this at root
+Go to your rails app directory
+
+    ruby ~/DevOpsOne/create_db_yml_server.rb the_password_you_set
+
+Now you can ```rake db:setup```
+
+If you didn't set up a postgres user with the same name as your rails app, this feature will come soon!
+
+One script to automate the whole process!
+

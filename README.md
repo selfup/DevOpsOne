@@ -4,7 +4,7 @@
 
 When on Ubuntu, a DB needs to be created with the same name as the username that rails autogenerates in the config/database.yml file
 
-There are from scratch setup scripts written in python.
+There are a few from scratch setup scripts written in python.
 
 Once ruby is installed the ruby script will hook everything up.
 

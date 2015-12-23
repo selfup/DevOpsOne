@@ -1,6 +1,7 @@
 import os
 os.system('rbenv install 2.2.3')
 os.system('rbenv global 2.2.3')
+os.system('rbenv rehash')
 os.system('ruby -v')
 os.system('curl -sL https://deb.nodesource.com/setup | sudo bash - && sudo apt-get install -y nodejs')
 os.system('sudo npm cache clean -f && sudo npm install -g n && sudo n stable')

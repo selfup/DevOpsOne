@@ -4,53 +4,27 @@
 
 When on Ubuntu, a DB needs to be created with the same name as the username that rails autogenerates in the config/database.yml file
 
+There are from scratch setup scripts written in python.
+
+Once ruby is installed the ruby script will hook everything up.
+
 The idea here is to create a ```valid database.yml``` file, as well as set correct ```ENV``` variables in a ```.rbenv-vars``` file. 
-
-Eventually this script will pull the ouput from ```rake secret``` to make the whole app ready for production and auto run ```RAILS_ENV=production rake db:setup```
-
-Then the pg database would get created with a default password that the user can change later.
-
-This way developing on a Linux machine can be much faster!
-
-# Disclaimer
-
-##### If you didn't set up a postgres user with the same name as your rails app, ```rake db:setup``` will not work!
-
-Also: you still need to make a ```SECRET_KEY_BASE``` ```ENV``` var in your ```.rbenv-vars``` file for production commands to work
 
 # How To Use
 
 #### On a Ubuntu Server
 
-Clone this at root
-
-Go to your rails app directory
-
-    ruby ~/DevOpsOne/create_db_yml_server.rb the_password_you_set
-
-Now you can ```rake db:setup```
-
-You may also ```RAILS_ENV=production  rake db:setup```
+[server_from_scratch_gist](https://gist.github.com/selfup/24d5901b0610fdbf7692)
 
 #### On a Ubuntu Desktop
 
-Clone this at root
+[desktop_from_scratch_gist](https://gist.github.com/selfup/3449f7671d5492506cc7)
 
-Go to your rails app directory
+#### On a Vagrant hashicorp/precise32 box
 
-    ruby ~/DevOpsOne/create_db_yml_desktop.rb the_password_you_set
+[vagrant_box_from_scratch_gist](https://gist.github.com/selfup/025dab4b72f5d9d56e10)
 
-Now you can ```rake db:setup```
-
-You may also ```RAILS_ENV=production  rake db:setup```
-
-### The script now creates a new pg user but you still have to manually make a password for that pg user
-
-    sudo -u postgres psql
-    \password your_pg_user_name
-    \q
-
-##### My next feautre is to automagically create the password based on your ARGV[0] for the new pg user
+##### My next feautre is to automagically create the password based on your ARGV[0] for the new pg user as well as write a CHEF recipe to do this all for you when provisioning new VM's or VPS's.
 
 #### One script to automate the whole process!
 

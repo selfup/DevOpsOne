@@ -1,6 +1,12 @@
 require 'pry'
 
 class CreateDB
+
+  def initialize
+    @sec  ||= secret
+    @vars ||= rbenv_vars
+  end
+
   def target_directory
     `pwd`
   end
@@ -36,9 +42,14 @@ production:
   password: <%= ENV['#{find_app_name.upcase}_DATABASE_PASSWORD'] %>"
   end
 
+  def secret
+    `rake secret`
+  end
+
   def rbenv_vars
-    "#{find_app_name.upcase}_DATABASE_USERNAME=#{find_app_name}"
-    "#{find_app_name.upcase}_DATABASE_PASSWORD=#{ARGV[0]}"
+    "SECRET_KEY_BASE=#{@sec}
+#{find_app_name.upcase}_DATABASE_USERNAME=#{find_app_name}
+#{find_app_name.upcase}_DATABASE_PASSWORD=#{ARGV[0]}"
   end
 
   def replace_file
@@ -47,13 +58,13 @@ production:
     `cd #{target_directory}`
     `echo "#{new_yml}" >> config/database.yml`
     `cd #{target_directory}`
-    `echo "#{rbenv_vars}" >> .rbenv-vars`
+    `echo "#{@vars}" >> .rbenv-vars`
   end
-  
+
   def create_pg_user
     `sudo -u postgres createuser -s "#{find_app_name}"`
   end
-  
+
   def do_it_all
     replace_file
     create_pg_user

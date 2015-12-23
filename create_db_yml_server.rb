@@ -37,6 +37,7 @@ production:
   end
 
   def rbenv_vars
+    "\n\n"
     "#{find_app_name.upcase}_DATABASE_USERNAME=#{find_app_name}"
     "#{find_app_name.upcase}_DATABASE_PASSWORD=#{ARGV[0]}"
   end
@@ -49,11 +50,11 @@ production:
     `cd #{target_directory}`
     `echo "#{rbenv_vars}" >> .rbenv-vars`
   end
-  
+
   def create_pg_user
     `sudo -u postgres createuser -s "#{find_app_name}"`
   end
-  
+
   def do_it_all
     replace_file
     create_pg_user

@@ -1,3 +1,4 @@
+import os
 os.system('echo export PATH="$HOME/.rbenv/bin:$PATH" >> ~/.bashrc')
 os.system('echo export PATH="$HOME/.rbenv/bin:$PATH" >> ~/.bash_profile')
 os.system('echo eval "$(rbenv init -)" >> ~/.bashrc')

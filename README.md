@@ -4,11 +4,13 @@
 
 When on Ubuntu, a DB needs to be created with the same name as the username that rails autogenerates in the config/database.yml file
 
-There are a few from scratch setup scripts written in python.
+There are a few from scratch setup scripts written in python that will setup the desired enviornment. Should take 5-10 minutes depending on how long it takes to compile ruby on your VPS/Machine.
 
-Once ruby is installed the ruby script will hook everything up.
+Once ruby/rails/node/postgres are installed the ruby script will hook everything up to an app that you clone down.
 
 The idea here is to create a ```valid database.yml``` file, as well as set correct ```ENV``` variables in a ```.rbenv-vars``` file. 
+
+Everytime you git pull from your repo, run the ruby script, and your app will be production ready.
 
 # How To Use
 

@@ -14,6 +14,12 @@ Everytime you git pull from your repo, run the ruby script, and your app will be
 
 # How To Use
 
+#### To create valid ENV vars/PG user/database.yml
+
+[production_ready_rails_ubuntu](https://gist.github.com/selfup/8552639296105b464750)
+
+### To setup from scratch:
+
 #### On a Ubuntu Server
 
 [server_from_scratch_gist](https://gist.github.com/selfup/24d5901b0610fdbf7692)

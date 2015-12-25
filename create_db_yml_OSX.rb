@@ -35,7 +35,6 @@ test:
 production:
   <<: *default
   database: #{find_app_name}_production
-  username: #{find_app_name}
   password: <%= ENV['#{find_app_name.upcase}_DATABASE_PASSWORD'] %>"
   end
 
@@ -45,7 +44,6 @@ production:
 
   def rbenv_vars
     "SECRET_KEY_BASE=#{@sec}
-#{find_app_name.upcase}_DATABASE_USERNAME=#{find_app_name}
 #{find_app_name.upcase}_DATABASE_PASSWORD=#{ARGV[0]}"
   end
 
@@ -58,12 +56,7 @@ production:
     `echo "#{@vars}" >> .rbenv-vars`
   end
 
-  # def create_pg_user
-  #   `sudo -u postgres createuser -s "#{find_app_name}"`
-  # end
-
   def do_it_all
-    # create_pg_user
     replace_file
     puts "#{find_app_name}"
   end

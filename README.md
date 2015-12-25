@@ -2,6 +2,8 @@
 
 ##### For Rails, rbenv, rbenv-vars, Ubuntu, and Postgres
 
+##### OSX intructions at bottom for devs running into production errors on Heroku
+
 When on Ubuntu, a DB needs to be created with the same name as the username that rails autogenerates in the config/database.yml file
 
 There are a few from scratch setup scripts written in python that will setup the desired enviornment. Should take 5-10 minutes depending on how long it takes to compile ruby on your VPS/Machine.
@@ -42,5 +44,5 @@ I made an extra script for OSX that can handle both creating a valid database.ym
 
 My script assumes that if ```which ruby``` returns rbenv that you have rbenv-vars, if it outputs ```rvm``` then it will append the new Variables to your application.yml
 
-**Please sure to add either .rbenv-vars OR application.yml to your gitignore!**
+**Please sure to add either .rbenv-vars OR application.yml to your .gitignore!**
 

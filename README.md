@@ -36,3 +36,11 @@ Everytime you git pull from your repo, run the ruby script, and your app will be
 
 #### One script to automate the whole process!
 
+# OSX
+
+I made an extra script for OSX that can handle both creating a valid database.yml and ENV variables for figaro or .rbenv-vars
+
+My script assumes that if ```which ruby``` returns rbenv that you have rbenv-vars, if it outputs ```rvm``` then it will append the new Variables to your application.yml
+
+**Please sure to add either .rbenv-vars OR application.yml to your gitignore!**
+

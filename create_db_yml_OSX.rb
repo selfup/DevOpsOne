@@ -5,6 +5,7 @@ class CreateDB
   def initialize
     @sec  ||= secret
     @vars ||= rbenv_vars
+    @figaro ||= figaro
   end
 
   def target_directory
@@ -47,12 +48,17 @@ production:
 #{find_app_name.upcase}_DATABASE_PASSWORD=#{ARGV[0]}"
   end
 
+  def figaro
+    "SECRET_KEY_BASE: #{@sec}
+#{find_app_name.upcase}_DATABASE_PASSWORD: #{ARGV[0]}"
+  end
+
   def figaro_or_rbenv_vars
     ruby_vm = `which ruby`
     if ruby_vm.include?("rbenv")
       `echo "#{@vars}" >> .rbenv-vars`
     else
-      `echo "#{@vars}" >> config/application.yml`
+      `echo "#{@figaro}" >> config/application.yml`
     end
   end
 

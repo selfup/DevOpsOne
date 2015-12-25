@@ -44,5 +44,5 @@ I made an extra script for OSX that can handle both creating a valid database.ym
 
 My script assumes that if ```which ruby``` returns rbenv that you have rbenv-vars, if it outputs ```rvm``` then it will append the new Variables to your application.yml
 
-**Please sure to add either .rbenv-vars OR application.yml to your .gitignore!**
+**Please be *sure* to add either .rbenv-vars OR application.yml to your .gitignore!**
 

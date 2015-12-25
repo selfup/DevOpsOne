@@ -47,13 +47,22 @@ production:
 #{find_app_name.upcase}_DATABASE_PASSWORD=#{ARGV[0]}"
   end
 
+  def figaro_or_rbenv_vars
+    ruby_vm = `which ruby`
+    if ruby_vm.include?("rbenv")
+      `echo "#{@vars}" >> .rbenv-vars`
+    else
+      `echo "#{@vars}" >> config/application.yml`
+    end
+  end
+
   def replace_file
     `cd #{target_directory}`
     `rm -rf config/database.yml`
     `cd #{target_directory}`
     `echo "#{new_yml}" >> config/database.yml`
     `cd #{target_directory}`
-    `echo "#{@vars}" >> .rbenv-vars`
+    figaro_or_rbenv_vars
   end
 
   def do_it_all

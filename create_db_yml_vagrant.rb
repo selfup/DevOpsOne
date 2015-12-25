@@ -15,6 +15,7 @@ class CreateDB
     t_dir = target_directory
     app_name = t_dir.split("/")
     dbyml_app_name = app_name.last.gsub("\n", "")
+    dbyml_app_name = dbyml_app_name.gsub("-", "")
   end
 
   def new_yml

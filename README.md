@@ -14,7 +14,7 @@ The idea here is to create a ```valid database.yml``` file, as well as set corre
 
 Everytime you git pull from your repo, run the ruby script, and your app will be production ready.
 
-# How To Use
+# How To Use (Ubuntu)
 
 #### To create valid ENV vars/PG user/database.yml
 

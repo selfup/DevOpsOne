@@ -40,7 +40,9 @@ Everytime you git pull from your repo, run the ruby script, and your app will be
 
 # OSX
 
-Clone this at root!
+I made an extra script for OSX that can handle both creating a valid database.yml and ENV variables for figaro or .rbenv-vars
+
+**Clone this at root!**
 
 Cd into your app directory:
 
@@ -50,7 +52,7 @@ Cd into your app directory:
     RAILS_ENV=production rake assets:precompile
     RAILS_ENV=production rails s
 
-I made an extra script for OSX that can handle both creating a valid database.yml and ENV variables for figaro or .rbenv-vars
+That's it! 
 
 My script assumes that if ```which ruby``` returns rbenv, that you have rbenv-vars. If it outputs ```rvm``` then it will append the new ENV variables to your application.yml
 

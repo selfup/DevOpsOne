@@ -46,7 +46,7 @@ I made an extra script for OSX that can handle both creating a valid database.ym
 
 Cd into your app directory:
 
-    ruby ~/DevOpsOne/create_db_yml_OSX.rb some_random_password_here
+    ruby ~/DevOpsOne/create_db_yml_OSX.rb someRandomPasswordHere
     
     RAILS_ENV=production rake db:setup
     RAILS_ENV=production rake assets:precompile

@@ -2,7 +2,7 @@
 
 ##### For Rails, rbenv, rbenv-vars, Ubuntu, and Postgres
 
-##### OSX intructions at bottom for devs running into production errors on Heroku
+#### OSX intructions are at the bottom for devs wanting to run production locally or to make sure everything works before pushing to Heroku.
 
 When on Ubuntu, a DB needs to be created with the same name as the username that rails autogenerates in the config/database.yml file
 

@@ -60,7 +60,7 @@ If you are using Fish add ```env``` infront of ```RAILS_ENV=production```
 
 Example: ```env RAILS_ENV=production rake db:setup```
 
-My script assumes that if ```which ruby``` returns rbenv, that you have rbenv-vars. If it outputs ```rvm``` then it will append the new ENV variables to your application.yml
+My script assumes that if ```which ruby``` returns rbenv, that you have rbenv-vars. If it outputs ```rvm``` then it will add the new ENV variables to your application.yml
 
 **Please be *sure* to add either .rbenv-vars OR application.yml to your .gitignore!**
 

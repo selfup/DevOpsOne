@@ -56,7 +56,7 @@ Cd into your app directory:
 
 That's it! 
 
-If you are usinf Fish add ```env``` infront of ```RAILS_ENV=production```
+If you are using Fish add ```env``` infront of ```RAILS_ENV=production```
 
 Example: ```env RAILS_ENV=production rake db:setup```
 

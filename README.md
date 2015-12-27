@@ -67,3 +67,7 @@ My script assumes that if ```which ruby``` returns rbenv, that you have rbenv-va
 This is an OpenSource Project. Pull requests accepted!
 
 I officially released this to the public on Christmas Day. Enjoy it!
+
+What it feels like:
+
+![](http://i.imgur.com/LXg0mHe.png)

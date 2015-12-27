@@ -58,6 +58,9 @@ production:
     `echo "#{new_yml}" >> config/database.yml`
     `cd #{target_directory}`
     `echo "#{@vars}" >> .rbenv-vars`
+    `cd #{target_directory}`
+    `echo "*/application.yml" >> .gitignore`
+    `echo ".rbenv-vars" >> .gitignore`
   end
 
   def create_pg_user

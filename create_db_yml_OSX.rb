@@ -1,5 +1,3 @@
-require 'pry'
-
 class CreateDB
 
   def initialize

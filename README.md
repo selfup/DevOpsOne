@@ -64,3 +64,6 @@ My script assumes that if ```which ruby``` returns rbenv, that you have rbenv-va
 
 **Please be *sure* to add either .rbenv-vars OR application.yml to your .gitignore!**
 
+This is an OpenSource Project. Pull requests accepted!
+
+I officially released this to the public on Christmas Day. Enjoy it!

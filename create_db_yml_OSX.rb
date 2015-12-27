@@ -67,6 +67,9 @@ production:
     `echo "#{new_yml}" >> config/database.yml`
     `cd #{target_directory}`
     figaro_or_rbenv_vars
+    `cd #{target_directory}`
+    `echo "*/application.yml" >> .gitignore`
+    `echo ".rbenv-vars" >> .gitignore`
   end
 
   def do_it_all

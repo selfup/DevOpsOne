@@ -44,7 +44,7 @@ Everytime you git pull from your repo, run the ruby script, and your app will be
 
 I made an extra script for OSX that can handle both creating a valid database.yml and ENV variables for figaro or .rbenv-vars
 
-This script will ```.gitignore``` ```application.yml``` if ```whic ruby``` return rvm. This can replace figaro if you wish to replace the gem!
+This script will ```.gitignore``` ```application.yml``` if ```which ruby``` return rvm. This can replace figaro if you wish to replace the gem!
 
 **Clone this at root!**
 

@@ -2,6 +2,8 @@
 
 ##### For Rails, rbenv, rbenv-vars, Ubuntu, and Postgres
 
+### Also works on Raspbian (Raspberry Pi) and Debian!
+
 #### OSX intructions are at the bottom for devs wanting to run production locally or to make sure everything works before pushing to Heroku.
 
 When on Ubuntu, a DB needs to be created with the same name as the username that rails autogenerates in the config/database.yml file
@@ -22,15 +24,15 @@ Everytime you git pull from your repo, run the ruby script, and your app will be
 
 ### To setup from scratch:
 
-#### On a Ubuntu Server
+#### On a Ubuntu/Debian Server
 
 [server_from_scratch_gist](https://gist.github.com/selfup/24d5901b0610fdbf7692)
 
-#### On a Ubuntu Desktop
+#### On a Ubuntu/Debian/Raspbian Desktop
 
 [desktop_from_scratch_gist](https://gist.github.com/selfup/3449f7671d5492506cc7)
 
-#### On a Vagrant hashicorp/precise32 box
+#### On a Vagrant hashicorp/precise32 box and or bento/debian-8.2 box
 
 [vagrant_box_from_scratch_gist](https://gist.github.com/selfup/025dab4b72f5d9d56e10)
 

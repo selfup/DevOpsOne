@@ -2,7 +2,7 @@
 
 ##### For Rails, rbenv, rbenv-vars, Ubuntu, and Postgres
 
-### Also works on Raspbian (Raspberry Pi) and Debian!
+##### Also works on Raspbian (Raspberry Pi) and Debian!
 
 #### OSX intructions are at the bottom for devs wanting to run production locally or to make sure everything works before pushing to Heroku.
 

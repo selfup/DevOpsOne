@@ -6,6 +6,8 @@
 
 #### OSX intructions are at the bottom for devs wanting to run production locally or to make sure everything works before pushing to Heroku.
 
+#### Looking for a Dockerfile that does this all for you? Go to this repo I made! [DockerOne](https://github.com/selfup/DockerOne)
+
 When on Ubuntu, a DB needs to be created with the same name as the username that rails autogenerates in the config/database.yml file
 
 There are a few from scratch setup scripts written in python that will setup the desired enviornment. Should take 5-10 minutes depending on how long it takes to compile ruby on your VPS/Machine.

@@ -8,6 +8,8 @@
 
 ##### Looking for a Dockerfile that sets up a container for you? Go to this repo I made! [DockerOne](https://github.com/selfup/DockerOne)
 
+##### Please copy and paste scripts line by line! This will ensure that everything works as planned.
+
 * You can then run my production scripts for rails once you clone and bundle a repo
 
 When on Ubuntu, a DB needs to be created with the same name as the username that rails autogenerates in the config/database.yml file

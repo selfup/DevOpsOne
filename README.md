@@ -20,7 +20,7 @@ Once ruby/rails/node/postgres are installed the ruby script will hook everything
 
 The idea here is to create a ```valid database.yml``` file, as well as set correct ```ENV``` variables in a ```.rbenv-vars``` file. 
 
-Everytime you git pull from your repo, run the ruby script, and your app will be production ready.
+Run the ruby script for the correct machine state (VM, VPS, Desktop, OSX), and your app will be production ready!
 
 # How To Use (Ubuntu)
 

@@ -81,3 +81,9 @@ I officially released this to the public on Christmas Day. Enjoy it!
 What it feels like:
 
 ![](https://i.imgur.com/LXg0mHe.png)
+
+TODO:
+
+* Going to work on a script that changes a rails app that is connected to sqlite3 to postgres
+* Going to work on a script that only sets up python3, ruby, node, mongo, and postgres
+* Figure out more fun stuff to work on!

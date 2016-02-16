@@ -26,7 +26,7 @@ There are a few from scratch setup scripts written in python that will setup the
 
 Once ruby/rails/node/postgres are installed the ruby script will hook everything up to an app that you clone down.
 
-The idea here is to create a ```valid database.yml``` file, as well as set correct ```ENV``` variables in a ```.rbenv-vars``` file. 
+The idea here is to create a ```valid database.yml``` file, as well as set correct ```ENV``` variables in a ```.rbenv-vars``` file.
 
 Run the ruby script for the correct machine state (VM, VPS, Desktop, OSX), and your app will be production ready!
 
@@ -58,7 +58,7 @@ Run the ruby script for the correct machine state (VM, VPS, Desktop, OSX), and y
 
 I made an extra script for OSX that can handle both creating a valid database.yml and ENV variables for figaro or .rbenv-vars
 
-This script will ```.gitignore``` ```application.yml``` if ```which ruby``` return rvm. 
+This script will ```.gitignore``` ```application.yml``` if ```which ruby``` returns rvm. 
 
 Make sure to ```figaro install``` prior to using this script if you use figaro!
 
@@ -67,12 +67,12 @@ Make sure to ```figaro install``` prior to using this script if you use figaro!
 Cd into your app directory:
 
     ruby ~/DevOpsOne/create_db_yml_OSX.rb someRandomPasswordHere
-    
+
     RAILS_ENV=production rake db:setup
     RAILS_ENV=production rake assets:precompile
     RAILS_ENV=production rails s
 
-That's it! 
+That's it!
 
 If you are using Fish add ```env``` infront of ```RAILS_ENV=production```
 

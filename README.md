@@ -10,9 +10,9 @@
 
 * Looking for a Dockerfile that sets up a container for you? Go to this repo I made! 
 
-[DockerOne](https://github.com/selfup/DockerOne)
+* [DockerOne](https://github.com/selfup/DockerOne)
 
-##### All Things Debian are in the **How to Use (Ubuntu)** section
+* **All Things Debian are in the *How to Use (Ubuntu)* section**
 
 
 

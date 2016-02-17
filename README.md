@@ -10,6 +10,8 @@
 
 ##### Looking for a Dockerfile that sets up a container for you? Go to this repo I made! [DockerOne](https://github.com/selfup/DockerOne)
 
+# Instructions and Reason/Purpose
+
 ##### Please copy and paste scripts line by line! This will ensure that everything works as planned.
 
 * You can then run my production scripts for rails once you clone and bundle a repo

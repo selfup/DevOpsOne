@@ -58,7 +58,7 @@ Run the ruby script for the correct machine state (VM, VPS, Desktop, OSX), and y
 
 I made an extra script for OSX that can handle both creating a valid database.yml and ENV variables for figaro or .rbenv-vars
 
-This script will ```.gitignore``` ```application.yml``` if ```which ruby``` returns rvm. 
+This script will ```.gitignore``` ```application.yml``` if ```which ruby``` returns rvm.
 
 Make sure to ```figaro install``` prior to using this script if you use figaro!
 
@@ -89,9 +89,3 @@ I officially released this to the public on Christmas Day 2015. Enjoy it!
 What it feels like:
 
 ![](https://i.imgur.com/LXg0mHe.png)
-
-TODO:
-
-* Going to work on a script that changes a rails app that is connected to sqlite3 to postgres
-* Going to work on a script that only sets up python3, ruby, node, mongo, and postgres
-* Figure out more fun stuff to work on!

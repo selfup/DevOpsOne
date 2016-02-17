@@ -1,4 +1,4 @@
-#### DevOpsOne
+# DevOpsOne
 
 ##### For Ruby (2.3.0), Rails (4.2.5), rbenv, rbenv-vars, Ubuntu (12.04 - 15.10), and Postgres (9.4 - 9.5)
 

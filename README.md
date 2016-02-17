@@ -6,13 +6,15 @@
 
 # Different Paths to Take From This README
 
-##### OSX intructions are at the bottom for devs wanting to run production locally or to make sure everything works before pushing to Heroku.
+* OSX intructions are at the bottom for devs wanting to run production locally or to make sure everything works before pushing to Heroku.
 
-##### Looking for a Dockerfile that sets up a container for you? Go to this repo I made! 
+* Looking for a Dockerfile that sets up a container for you? Go to this repo I made! 
+
+[DockerOne](https://github.com/selfup/DockerOne)
 
 ##### All Things Debian are in the **How to Use (Ubuntu)** section
 
-[DockerOne](https://github.com/selfup/DockerOne)
+
 
 # Instructions and Reason/Purpose
 
